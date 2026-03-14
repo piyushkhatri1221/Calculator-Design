@@ -1,0 +1,119 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body 
+        {
+        background-image: linear-gradient(rgba(4, 14, 59, 0.7),rgba(4,14,59,0.7)),url(BackGround.jpg);
+        background-repeat: no-repeat;
+        height: 100vh;
+        background-size: cover;
+        }
+        .all {
+            width: 380px;
+            height: 560px;
+            left: 50%;
+            top: 50%;
+            position: absolute;
+            transform: translate(-50%, -50%);
+            border-radius: 40px;
+            border: 1px solid white;
+            filter: blur(8px);
+            -webkit-backdrop-filter: blur(8px);
+            box-shadow: 10px 10px 1px 1px rgba(87, 80, 80, 0.8);
+            z-index: 0;
+        }
+        .container {
+            width: 320px;
+            height: 500px;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            position: absolute;
+            background-color: black;
+            border-radius: 40px;
+            z-index: 1;
+        }
+        button {
+            height: 48px;
+            width: 62px;
+            border-radius: 40px;
+            margin: 3px;
+            cursor: pointer;
+        }
+        .ac:hover, .delete:hover, .percent:hover {
+            background-color: rgb(163, 159, 159);
+        }
+        .ac, .delete, .percent {
+            background-color: silver;
+            border: none;
+        }
+        .btn10, .btn11, .btn12, .btn13, .btn14, .btn15 {
+            background-color: orange;
+            border: none;
+            color: white;
+        }
+        .btn15 {
+            width: 130px;
+        }
+        .btn1, .btn2, .btn3, .btn4, .btn5, .btn6, .btn7, .btn8, .btn9 {
+            background-color: #2b2929;
+            border: none;
+            color: white;
+        }
+        .buttons {
+            position: absolute;
+            left: 16px;
+            right: 0;
+            bottom: 10px;
+            margin: auto;
+        }
+        .display1 {
+            border: none;
+            background-color: white;
+            border-radius: 30px;
+            font-size: 25px;
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -180%);
+            height: 60px;
+            width: 280px;
+            background-color: black;
+            color: white;
+            text-align: right;
+        }
+    </style>
+</head>
+<body>
+    <div class="all"></div>
+    <div class="container">
+        <input type="button" id="display" class="display1">
+        <div class="buttons">
+            <button class="ac" onclick="display.value =''">AC</button>
+            <button class="delete" onclick="display.value = display.value.toString().slice(0, -1)">Del</button>
+            <button class="percent" onclick="display.value += '%'">%</button>
+            <button class="btn11" onclick="display.value += '/'">/</button>
+            <button class="btn7" onclick="display.value += '7'">7</button>
+            <button class="btn8" onclick="display.value += '8'">8</button>
+            <button class="btn9" onclick="display.value += '9'">9</button>
+            <button class="btn12" onclick="display.value += '*'">X</button>
+            <button class="btn4" onclick="display.value += '4'">4</button>
+            <button class="btn5" onclick="display.value += '5'">5</button>
+            <button class="btn6" onclick="display.value += '6'">6</button>
+            <button class="btn13" onclick="display.value += '-'">-</button>
+            <button class="btn1" onclick="display.value += '1'">1</button>
+            <button class="btn2" onclick="display.value += '2'">2</button>
+            <button class="btn3" onclick="display.value += '3'">3</button>
+            <button class="btn10" onclick="display.value += '+'">+</button>
+            <button class="btn15" onclick="display.value += '0'">0</button>
+            <button class="dot" onclick="display.value += '.'">.</button>
+            <button class="btn14" onclick="display.value = eval(display.value)">=</button>
+        </div>
+    </div>
+</body>
+</html>
